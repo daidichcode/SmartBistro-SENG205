@@ -1,34 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>SmartBistro Ordering System</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <div class="container">
-    <h1>SmartBistro</h1>
-    <p class="subtitle">Table 5 - QR Ordering Menu</p>
-
-    <div class="menu-card">
-      <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=500" alt="Burger">
-      <h2>Classic Beef Burger</h2>
-      <p>Grilled beef patty, cheese, lettuce, tomato and special sauce.</p>
-      <h3>$12.00</h3>
-      <button onclick="addToCart()">Add to Cart</button>
+<div class="app">
+  <header>
+    <div>
+      <h1>SmartBistro</h1>
+      <p>Table 5 • QR Ordering System</p>
     </div>
+    <span class="badge">Dine-in</span>
+  </header>
 
-    <div class="cart">
-      <h2>Order Summary</h2>
-      <p id="cart-item">No item selected.</p>
-      <p id="total"></p>
-      <button onclick="checkout()">Pay Now</button>
+  <section class="hero">
+    <h2>Today’s Special</h2>
+    <p>Freshly prepared meals delivered directly to your table.</p>
+  </section>
+
+  <section class="menu">
+    <div class="food-card">
+      <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=800" alt="Classic Beef Burger">
+      <div class="food-info">
+        <h2>Classic Beef Burger</h2>
+        <p>Grilled beef patty, cheddar cheese, lettuce, tomato and house sauce.</p>
+        <div class="row">
+          <strong>$12.00</strong>
+          <button onclick="addToCart()">Add to Cart</button>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <div id="confirmation" class="confirmation"></div>
-  </div>
+  <section class="cart">
+    <h2>Order Summary</h2>
+    <p id="cart-item" class="empty">No item selected yet.</p>
+    <p id="total"></p>
 
-  <script src="script.js"></script>
+    <input id="email" type="email" placeholder="Enter customer email" />
+
+    <button class="pay-btn" onclick="checkout()">Pay Now</button>
+  </section>
+
+  <section id="confirmation" class="confirmation hidden"></section>
+</div>
+
+<script src="script.js"></script>
 </body>
+</html>
 </html>

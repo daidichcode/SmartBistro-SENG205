@@ -1,57 +1,164 @@
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f7f7f7;
-  margin: 0;
-  padding: 0;
+* {
+  box-sizing: border-box;
 }
 
-.container {
-  width: 420px;
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #fff4e6, #f7f7f7);
+  color: #222;
+}
+
+.app {
+  width: 430px;
   margin: 30px auto;
   background: white;
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0 0 10px #ccc;
-  text-align: center;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.15);
 }
 
-.subtitle {
-  color: #666;
+header {
+  padding: 24px;
+  background: #1f1f1f;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.menu-card {
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  padding: 15px;
-  margin-top: 20px;
+header h1 {
+  margin: 0;
+  font-size: 28px;
 }
 
-.menu-card img {
+header p {
+  margin: 5px 0 0;
+  color: #ccc;
+}
+
+.badge {
+  background: #ffb703;
+  color: #111;
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.hero {
+  padding: 24px;
+  background: #fff3cd;
+}
+
+.hero h2 {
+  margin: 0 0 8px;
+}
+
+.hero p {
+  margin: 0;
+  color: #555;
+}
+
+.menu {
+  padding: 24px;
+}
+
+.food-card {
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid #eee;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+}
+
+.food-card img {
   width: 100%;
-  border-radius: 10px;
+  height: 230px;
+  object-fit: cover;
+}
+
+.food-info {
+  padding: 18px;
+}
+
+.food-info h2 {
+  margin: 0 0 8px;
+}
+
+.food-info p {
+  color: #666;
+  line-height: 1.4;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+
+strong {
+  font-size: 22px;
 }
 
 button {
-  background-color: #222;
-  color: white;
-  padding: 10px 18px;
   border: none;
-  border-radius: 6px;
+  padding: 12px 18px;
+  border-radius: 12px;
+  background: #222;
+  color: white;
+  font-weight: bold;
   cursor: pointer;
 }
 
 button:hover {
-  background-color: #444;
+  background: #444;
 }
 
 .cart {
-  margin-top: 25px;
-  padding: 15px;
-  border-top: 1px solid #ddd;
+  padding: 24px;
+  border-top: 1px solid #eee;
+}
+
+.cart h2 {
+  margin-top: 0;
+}
+
+.empty {
+  color: #888;
+}
+
+#total {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 13px;
+  margin: 12px 0;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+}
+
+.pay-btn {
+  width: 100%;
+  background: #0f766e;
+}
+
+.pay-btn:hover {
+  background: #115e59;
 }
 
 .confirmation {
-  margin-top: 20px;
-  color: green;
-  font-weight: bold;
+  margin: 0 24px 24px;
+  padding: 18px;
+  background: #dcfce7;
+  border: 1px solid #86efac;
+  border-radius: 16px;
+  color: #166534;
+  line-height: 1.6;
+}
+
+.hidden {
+  display: none;
 }
